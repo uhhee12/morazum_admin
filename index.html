@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no, target-densitydpi=medium-dpi">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
+     <link rel="stylesheet" type="text/css" href="js/lib/datepicker/datepicker.min.css">
+    <link type="text/css" rel="stylesheet" href="css/reset.css">
+    <link type="text/css" rel="stylesheet" href="css/style.css">
+    <!-- date -->
+   
+
+    <script src="https://code.jquery.com/jquery-latest.min.js" defer></script>
+    <script type="text/javascript" src="./js/lib/datepicker/datepicker.min.js" defer></script>
+    <script type="text/javascript" src="./js/lib/datepicker/datepicker.ko-KR.js" defer></script>
+    <script type="text/javascript" src="./js/main.js" defer></script>
+    <!-- date -->
+   
+
+    <title>몰아줌 관리자</title>
+
+</head>
+
+<body>
+
+    <div class="wrap">
+        <header>
+            <div class="in-header">
+                <a href="#"><img src="images/logo_03.png" class="logo"></a>
+                <ul>
+                    <li class="bar"><a href="#">이벤트</a></li>
+                    <li class="no"><a href="#">회원관리</a></li>
+                    <li class="no"><a href="#">당첨관리</a></li>
+                    <li class="no"><a href="#">후기</a></li>
+                </ul>
+                <div class="main-login">
+                    <p>[관리자]<span>김로운님</span></p>
+                    <button type="button"><img src="images/main_06.png">로그아웃</button>
+                </div>
+            </div>
+
+        </header>
+        <div class="sub-header" id="sub-header">
+            <div>
+                <ul>
+                    <li><a href="#">이벤트목록</a></li>
+                    <li><a href="#">이벤트등록</a></li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="wrapper">
+            <h2>이벤트 목록</h2>
+            <div class="box">
+                <form>
+                    <table class="table1">
+                        <tr>
+                            <th>이벤트명 / 이벤트코드</th>
+                            <td><input type="text" class="input50 input" name="" id=""></td>
+                        </tr>
+                        <tr>
+                            <th>기간</th>
+                            <td>
+                                <select name="" id="" class="select sel30">
+                                    <option>등록일</option>
+                                </select>
+                                <ul class="radio-list">
+                                    <li><input type="radio" id="today" name="date" class="day" />
+                                        <label for="today">오늘</label></li>
+                                    <li><input type="radio" id="day7" name="date" class="day" />
+                                        <label for="day7">7일</label></li>
+                                    <li><input type="radio" id="day30" name="date" class="day" />
+                                        <label for="day30">1개월</label></li>
+                                    <li><input type="radio" id="day90" name="date" class="day" />
+                                        <label for="day90">3개월</label></li>
+                                    <li><input type="radio" id="day180" name="date" class="day" />
+                                        <label for="day180">6개월</label></li>
+                                </ul>
+
+                                <input type="text" name="" id="" class="datepicker input">
+                                <span class="sub-span">~</span>
+                                <input type="text" name="" id="" class="datepicker input">
+                            </td>
+                        </tr>
+                        <tr>
+                            <th>진행여부</th>
+                            <td>
+                                <ul class="check-list">
+                                    <li>
+                                        <input type="checkbox" id="ex_rd" name="">
+                                        <label for="ex_rd"><span></span>전체</label>
+                                    </li>
+                                    <li>
+                                        <input type="checkbox" id="ex_rd2" name="">
+                                        <label for="ex_rd2"><span></span>진행중</label>
+                                    </li>
+                                    <li>
+                                        <input type="checkbox" id="ex_rd3" name="">
+                                        <label for="ex_rd3"><span></span>진행종료</label>
+                                    </li>
+                                    <li>
+                                        <input type="checkbox" id="ex_rd4" name="">
+                                        <label for="ex_rd4"><span></span>진행취소</label>
+                                    </li>
+                                    <li>
+                                        <input type="checkbox" id="ex_rd5" name="">
+                                        <label for="ex_rd5"><span></span>진행예정</label>
+                                    </li>
+                                </ul>
+                            </td>
+                        </tr>
+                    </table>
+                </form>
+
+                <div class="btn-box">
+                    <button type="submit" class="orange-btn">검색</button>
+                    <button type="reset" class="gray-btn">초기화</button>
+                </div>
+            </div>
+
+            <div class="box">
+                <p class="titleP">검색결과 <span>2건</span></p>
+
+                <div class="btn-float-box">
+                    <button type="button" onclick="location.href='#'" class="orange-btn orange-small">등록</button><button type="button" class="border-btn" id="list">목록</button>
+
+                    <div class="pop-chack-list-box">
+                        <p>목록</p>
+                        <ul class="pop-chack-list">
+                            <li>
+                                <input type="checkbox" id="pop-list1" name="">
+                                <label for="pop-list1"><span></span>참여자</label>
+                            </li>
+                            <li>
+                                <input type="checkbox" id="pop-list2" name="">
+                                <label for="pop-list2"><span></span>응모금액</label>
+                            </li>
+                            <li>
+                                <input type="checkbox" id="pop-list3" name="">
+                                <label for="pop-list3"><span></span>당첨자</label>
+                            </li>
+                            <li>
+                                <input type="checkbox" id="pop-list4" name="">
+                                <label for="pop-list4"><span></span>찜 수</label>
+                            </li>
+                        </ul>
+                        <button type="button" class="gray-btn">적용</button>
+                    </div>
+
+                </div>
+
+                <div class="border-top-box">
+
+                    <table class="table2 main-tb">
+                        <tr>
+                            <th><input type="checkbox" name="menu" id="checkAll" onclick="fnCheckAll('menu','checkAll')"> <label for="checkAll"><span></span></label></th>
+                            <th>NO</th>
+                            <th>이벤트코드</th>
+                            <th>이벤트명</th>
+                            <th>진행여부</th>
+                            <th>등록일</th>
+                            <th>응모기간</th>
+                            <th>목표금액</th>
+                            <th>상품명</th>
+                            <th>상품금액</th>
+                            <th>추천일</th>
+                            <th>참여자</th>
+                        </tr>
+                        <tr>
+                            <td><input type="checkbox" name="menu" id="menu1"> <label for="menu1"><span></span></label></td>
+                            <td>54</td>
+                            <td>E1234</td>
+                            <td style="word-break: break-all"><a href="#" class="blue-txt">돌려돌려 세탁기</a></td>
+                            <td>진행중<br>(마감임박)</td>
+                            <td>2020.01.01</td>
+                            <td>2020.01.01~<br>2020.01.31</td>
+                            <td>2,000,000</td>
+                            <td>세탁기</td>
+                            <td>2,000,000</td>
+                            <td>2020.02.01<br>20:00</td>
+                            <td>150<br><button type="button" class="blue-btn people">보기</button></td>
+                        </tr>
+                        <tr>
+                            <td><input type="checkbox" name="menu" id="menu2"> <label for="menu2"><span></span></label></td>
+                            <td>53</td>
+                            <td>E1234</td>
+                            <td style="word-break: break-all"><a href="#" class="blue-txt">구워구월 오븐</a></td>
+                            <td>진행중</td>
+                            <td>2020.01.01</td>
+                            <td>2020.01.01~<br>2020.01.31</td>
+                            <td>2,000,000</td>
+                            <td>오븐</td>
+                            <td>2,000,000</td>
+                            <td>2020.02.01<br>20:00</td>
+                            <td>150<br><button type="button" class="blue-btn list">보기</button></td>
+                        </tr>
+                    </table>
+
+                    <div class="page">
+                        <ul>
+                            <li><a href="#"><img src="images/pageing_03.png"></a></li>
+                            <li><a href="#"><img src="images/pageing_05.png"></a></li>
+                            <li class="on"><a href="#">1</a></li>
+                            <li><a href="#">2</a></li>
+                            <li><a href="#">3</a></li>
+                            <li><a href="#"><img src="images/pageing_07.png"></a></li>
+                            <li><a href="#"><img src="images/pageing_09.png"></a></li>
+                        </ul>
+                    </div>
+
+                </div>
+            </div>
+
+            <div class="people-list-pop">
+                <div class="list-pop-inner">
+                    <p class="pop-title">참여자 목록</p>
+                    <img src="images/close2_03.png" class="close">
+                    <table class="table2 list-pop-tb">
+                        <tr>
+                            <th>이벤트코드</th>
+                            <th>이벤트명</th>
+                            <th>진행여부</th>
+                            <th>등록일</th>
+                            <th>응모기간</th>
+                            <th>목표금액</th>
+                            <th>상품명</th>
+                            <th>상품금액</th>
+                            <th>추첨일</th>
+                            <th>참여자</th>
+                        </tr>
+                        <tr>
+                            <td>E1234</td>
+                            <td style="word-break: break-all"><a href="#" class="blue-txt">돌려돌려 세탁기</a></td>
+                            <td>진행중(마감임박)</td>
+                            <td>2020.01.01</td>
+                            <td>2020.01.01 ~ <br>2020.01.31</td>
+                            <td>2,000,000</td>
+                            <td>세탁기</td>
+                            <td>2,000,000</td>
+                            <td>2020.02.01<br>20:00</td>
+                            <td>250</td>
+                        </tr>
+                    </table>
+
+                    <div class="list-pop-sub">
+                        <select name="" id="" class="select select10">
+                            <option>5개씩</option>
+                            <option>10개씩</option>
+                            <option>20개씩</option>
+                        </select>
+                    </div>
+                    <table class="table2 list-pop-tb2">
+                        <thead>
+                            <tr>
+                                <th>NO</th>
+                                <th>아이디</th>
+                                <th>이메일</th>
+                                <th>전화번호</th>
+                                <th>닉네임</th>
+                                <th>응모횟수</th>
+                                <th>응모금액</th>
+                                <th>당첨여부</th>
+                                <th>반환응모권</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>54</td>
+                                <td style="word-break: break-all">test123</td>
+                                <td style="word-break: break-all">test1232naver.com</td>
+                                <td>010-1234-5678</td>
+                                <td style="word-break: break-all">강동원참치</td>
+                                <td>2</td>
+                                <td>20,000</td>
+                                <td>-</td>
+                                <td>-</td>
+                            </tr>
+                            <tr>
+                                <td>53</td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td>낙첨</td>
+                                <td>20,000</td>
+                            </tr>                            
+                        </tbody>
+                    </table>
+                    <div class="page">
+                        <ul>
+                            <li><a href="#"><img src="images/pageing_03.png"></a></li>
+                            <li><a href="#"><img src="images/pageing_05.png"></a></li>
+                            <li class="on"><a href="#">1</a></li>
+                            <li><a href="#">2</a></li>
+                            <li><a href="#">3</a></li>
+                            <li><a href="#"><img src="images/pageing_07.png"></a></li>
+                            <li><a href="#"><img src="images/pageing_09.png"></a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div><!-- wrapper -->
+    </div><!-- wrap -->
+
+</body></html>
